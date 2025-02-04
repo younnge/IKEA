@@ -1,0 +1,1236 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+a {
+    text-decoration: none;
+    font-family: 'moon';
+    font-weight: 1000;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header ul li {
+    padding: 0 20px;
+}
+
+.head {
+    width: 1640px;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head ul {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+
+/* section1 */
+
+.video {
+    width: 1920px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.fbox {
+    position: absolute;
+    width: 1280px;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.fbox .text .buttonM {
+    width: 226px;
+    height: 65px;
+    border-radius: 53px;
+    background-color: #fff;
+    border: 15px solid #FFDA1A;
+    position: relative;
+    transition: all .7s;
+    box-shadow: 2px 2px 30px 1px rgba(66, 66, 66, 0.658);
+}
+
+.fbox .text .buttonM a {
+    font-size: 25px;
+    color: #0051BA;
+    transition: all .7s;
+}
+
+.fbox .text .buttonM::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #0051BA;
+}
+
+@keyframes yy {
+    from {
+        left: 0;
+        top: -3px;
+    }
+
+    to {
+        left: 85%;
+        top: -3px;
+    }
+}
+
+@keyframes zz {
+    from {
+        left: 85%;
+        top: -3px;
+    }
+
+    to {
+        left: 0;
+        top: -3px;
+    }
+}
+
+.fbox .text .buttonM.on {
+    background-color: #0051BA;
+    border: 15px solid #fff;
+}
+
+.fbox .text .buttonM.on a {
+    color: #FFDA1A;
+}
+
+.buttonM.on::before {
+    animation: yy .7s linear both alternate running;
+}
+
+.buttonM.back::before {
+    animation: zz .7s linear running;
+}
+
+.fbox h1 {
+    font-size: 70px;
+    font-weight: 1000;
+    color: #FFDA1A;
+    z-index: 110;
+}
+
+.fbox .button ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fbox .button ul li {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 230px;
+    height: 230px;
+    border-radius: 53px;
+    background-color: #FFDA1A;
+    box-shadow: 2px 2px 30px 1px rgba(66, 66, 66, 0.658);
+    transition: all .5s;
+    scale: 1;
+}
+
+.fbox .button ul li:hover {
+    background-color: #fff;
+    scale: 0.9;
+}
+
+.fbox .button ul li a {
+    font-size: 32px;
+    font-weight: 1000;
+    color: #0051BA;
+    content: '';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.fbox .button ul li:nth-child(1) a img {
+    width: 105px;
+    height: 69px;
+    margin: 0 auto;
+}
+
+.fbox .button ul li:nth-child(2) a img {
+    width: 94px;
+    height: 71px;
+    margin: 0 auto;
+}
+
+.fbox .button ul li:nth-child(3) a img {
+    width: 86px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.fbox .button ul li:nth-child(4) a img {
+    width: 60px;
+    height: 59px;
+    margin: 0 auto;
+}
+
+/* section2 */
+
+#s2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #0051BA;
+}
+
+.box2 {
+    width: 1800px;
+    height: 821px;
+    border-radius: 80px 0px 0px 80px;
+    background-color: #FFDA1A;
+    position: absolute;
+    top: 130px;
+    right: 0;
+}
+
+.cardbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.box1m {
+    width: 1800px;
+    height: 129px;
+    background-color: #FFDA1A;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.box2m {
+    width: 332px;
+    height: 129px;
+    border-radius: 66px;
+    background-color: #0051BA;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+.clothes {
+    transition: all .5s;
+}
+
+.box2m.open {
+    width: 1000px;
+}
+
+.box2m.open .clothes {
+    left: 900px;
+    background-color: #FFDA1A;
+}
+
+.box2m.close {
+    width: 332px;
+}
+
+.box2m h1.open {
+    position: absolute;
+    left: 700px;
+}
+.box2m h1 {
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    transition: all .5s;
+}
+
+.front,
+.back1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all .7s;
+}
+
+.front {
+    transform: perspective(5000px) rotateY(0deg);
+}
+
+.back1 {
+    transform: perspective(5000px) rotateY(-180deg);
+}
+
+.card1:hover .front {
+    transform: perspective(5000px) rotateY(180deg);
+}
+
+.card1:hover .back1 {
+    transform: perspective(5000px) rotateY(0deg);
+}
+
+.card2:hover .front {
+    transform: perspective(5000px) rotateY(180deg);
+}
+
+.card2:hover .back1 {
+    transform: perspective(5000px) rotateY(0deg);
+}
+
+.card3:hover .front {
+    transform: perspective(5000px) rotateY(180deg);
+}
+
+.card3:hover .back1 {
+    transform: perspective(5000px) rotateY(0deg);
+}
+
+.card1 {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+}
+
+.card2 {
+    position: absolute;
+    top: 2vh;
+    left: 33vw;
+}
+
+.card3 {
+    position: absolute;
+    top: 2vh;
+    left: 63vw;
+}
+
+.box2m a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #0051BA;
+    position: absolute;
+    bottom: 35px;
+    left: 360px;
+    transition: all .5s;
+}
+
+.box2m span:nth-child(1) {
+    width: 26px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 23px;
+    left: 12px;
+}
+
+.box2m span:nth-child(2) {
+    width: 4px;
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 12px;
+    left: 23px;
+}
+
+/* section3 */
+
+.section:nth-child(3) {
+    position: relative;
+    background: linear-gradient(#FFDA1A 130px, #fff 129px);
+}
+
+.box3 {
+    width: 1800px;
+    height: 763px;
+    border-radius: 0px 80px 80px 0px;
+    background-color: #FFDA1A;
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+}
+
+.box3 h1 {
+    font-size: 80px;
+    color: #fff;
+    font-weight: 10000;
+    position: absolute;
+    top: -125px;
+    right: 48vw;
+    z-index: 9;
+}
+
+.cardbox1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1m1 {
+    width: 1800px;
+    height: 129px;
+    background-color: #FFDA1A;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 130px;
+    left: 0;
+}
+
+.box2m1 {
+    width: 332px;
+    height: 129px;
+    border-radius: 66px;
+    background-color: #fff;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    transition: all .5s;
+}
+
+.clothes1 {
+    transition: all .5s;
+}
+
+.box2m1.open {
+    width: 1000px;
+}
+
+.box2m1.open .clothes1 {
+    right: 900px;
+    background-color: #379909;
+}
+
+.box2m1.close {
+    width: 332px;
+}
+
+.box2m1 h1.open {
+    position: absolute;
+    right: 700px;
+}
+
+.box2m1 h1 {
+    color: #E90C0C;
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    right: 120px;
+    transition: all .5s;
+}
+
+.front1,
+.back2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .7s;
+}
+.cardbox1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardbox1 .front1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .7s;
+
+}
+
+.card4 {
+    width: 505px;
+    height: 713px;
+    position: relative;
+    top: 2vh;
+    right: -1vw;
+    background: url('../images/Group4.png') no-repeat center/cover;
+}
+
+.card5 {
+    width: 505px;
+    height: 713px;
+    position: relative;
+    top: 2vh;
+    right: 0vw;
+    background: url('../images/Group5.png') no-repeat center/cover;
+}
+
+.card6 {
+    width: 505px;
+    height: 713px;
+    position: relative;
+    top: 2vh;
+    right: 1vw;
+    background: url('../images/Group6.png') no-repeat center/cover;
+}
+
+.card4 .front1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card5 .front1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card6 .front1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card4:hover .front1 {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+
+.card5:hover .front1 {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.card6:hover .front1 {
+    opacity: 0.9;
+    visibility: visible;
+}
+.box2m1 a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #379909;
+    position: absolute;
+    top: 40px;
+    right: 360px;
+    transition: all .5s;
+}
+
+.box2m1 span:nth-child(1) {
+    width: 26px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 23px;
+    left: 12px;
+}
+
+.box2m1 span:nth-child(2) {
+    width: 4px;
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 12px;
+    left: 23px;
+}
+
+/* section4 */
+
+.inner {
+    width: 1920px;
+    height: 100vh;
+}
+
+.title h1 {
+    position: absolute;
+    top: 1vh;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 70px;
+    color: #0051BA;
+    font-family: 'moon';
+    text-align: center;
+}
+
+.toybox {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.t1 {
+    position: absolute;
+    top: 30vh;
+    left: 18vw;
+    rotate: 20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t2 {
+    position: absolute;
+    top: 48vh;
+    left: 10vw;
+    rotate: -20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t3 {
+    position: absolute;
+    top: 23vh;
+    left: 32vw;
+    rotate: -20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t4 {
+    position: absolute;
+    top: 75vh;
+    left: 82vw;
+    rotate: -15deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t5 {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    rotate: 20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t6 {
+    position: absolute;
+    top: 43vh;
+    left: 68vw;
+    rotate: 0deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t7 {
+    position: absolute;
+    top: 18vh;
+    left: 83vw;
+    rotate: 20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t8 {
+    position: absolute;
+    top: 18vh;
+    left: 8vw;
+    rotate: 10deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t9 {
+    position: absolute;
+    top: 55vh;
+    left: 20vw;
+    rotate: 0deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t10 {
+    position: absolute;
+    top: 65vh;
+    left: 36vw;
+    rotate: -10deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t11 {
+    position: absolute;
+    top: 65vh;
+    left: 72vw;
+    rotate: 25deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t12 {
+    position: absolute;
+    top: 45vh;
+    left: 85vw;
+    rotate: 55deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t13 {
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
+    rotate: -30deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t14 {
+    position: absolute;
+    top: 80vh;
+    left: 58vw;
+    rotate: -15deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t15 {
+    position: absolute;
+    top: 53vh;
+    left: 57vw;
+    rotate: -15deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t16 {
+    position: absolute;
+    top: 70vh;
+    left: 45vw;
+    rotate: 20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t17 {
+    position: absolute;
+    top: 20vh;
+    left: 65vw;
+    rotate: -20deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t18 {
+    position: absolute;
+    top: 40vh;
+    left: 32vw;
+    rotate: 15deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t19 {
+    position: absolute;
+    top: 75vh;
+    left: 8vw;
+    rotate: 0deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t20 {
+    position: absolute;
+    top: 78vh;
+    left: 25vw;
+    rotate: -45deg;
+    transform: scale(1);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.t1:hover {
+    transform: scale(1.5);
+}
+
+.t2:hover {
+    transform: scale(1.5);
+}
+
+.t3:hover {
+    transform: scale(1.5);
+}
+
+.t4:hover {
+    transform: scale(1.5);
+}
+
+.t5:hover {
+    transform: scale(1.5);
+}
+
+.t6:hover {
+    transform: scale(1.5);
+}
+
+.t7:hover {
+    transform: scale(1.5);
+}
+
+.t8:hover {
+    transform: scale(1.5);
+}
+
+.t9:hover {
+    transform: scale(1.5);
+}
+
+.t10:hover {
+    transform: scale(1.5);
+}
+
+.t11:hover {
+    transform: scale(1.5);
+}
+
+.t12:hover {
+    transform: scale(1.5);
+}
+
+.t13:hover {
+    transform: scale(1.5);
+}
+
+.t14:hover {
+    transform: scale(1.5);
+}
+
+.t15:hover {
+    transform: scale(1.5);
+}
+
+.t16:hover {
+    transform: scale(1.5);
+}
+
+.t17:hover {
+    transform: scale(1.5);
+}
+
+.t18:hover {
+    transform: scale(1.5);
+}
+
+.t19:hover {
+    transform: scale(1.5);
+}
+
+.t20:hover {
+    transform: scale(1.5);
+}
+
+.toybox p {
+    text-align: center;
+    font-family: 'moon';
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+}
+
+/* section 5 */
+
+#s5 {
+    background-color: #FFDA1A;
+}
+.title h1 {
+    position: absolute;
+    top: 8vh;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 70px;
+    color: #0051BA;
+    font-family: 'moon';
+    font-weight: bold;
+    text-align: center;
+}
+
+.slidebox {
+    position: relative;
+}
+
+.slidebox .slideinner {
+    width: 1500px;
+    height: 700px;
+    margin: 0 auto;
+    position: absolute;
+    top: -25vh;
+    left: 10vw;
+    text-align: center;
+    line-height: center;
+    background-color: #fff;
+    border-radius: 75px;
+}
+
+.slidebox .slideinner .point {
+    position: absolute;
+    top: 7vh;
+    left: 20vw;
+    z-index: 9;
+    width: 50%;
+}
+
+.slidebox .slideinner .pointer {
+    position: absolute;
+    top: 15vh;
+    left: 45vw;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.swiper-slide p {
+    font-family: 'moon';
+    font-size: 40px;
+    font-weight: 1000;
+    position: absolute;
+    top: 50vh;
+}
+
+.swiper-slide h4 {
+    font-family: 'moon';
+    font-size: 40px;
+    font-weight: 1000;
+    position: absolute;
+    top: 6vh;
+}
+
+.swiper-slide:nth-child(4) p {
+    color: #0051BA;
+    transition: all .5s;
+}
+
+.swiper-slide:nth-child(3) p {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(5) p {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(1) p {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(2) p {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(4) h4 {
+    color: #0051BA;
+    transition: all .5s;
+}
+
+.swiper-slide:nth-child(3) h4 {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(5) h4 {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(1) h4 {
+    color: #ffffff;
+}
+
+.swiper-slide:nth-child(2) h4 {
+    color: #ffffff;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+/* section 6 */
+
+.work {
+    width: 1920px;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.tabmenu .inner {
+    display: flex;
+    width: 90%;
+    height: 120px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabnav {
+    display: flex;
+}
+
+.tabnav li a {
+    display: block;
+    padding: 0 2rem;
+    line-height: 100px;
+    border-radius: 50px;
+    color: #0051ba67;
+    transition: all .5s;
+}
+
+.tabnav li.on a {
+    /* li에  클래스 on이 붙으면 a는? */
+    background-color: #0051BA;
+    color: #fff;
+    font-family: 'moon';
+    font-size: 30px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px 1px rgba(85, 85, 85, 0.377);
+}
+.img-wrap {
+    width: 100%;
+    height: 50%;
+}
+.tabitem .img-wrap {
+    width: 25%;
+    height: 100vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10vh;
+}
+
+.tabitem .img-wrap .imgbox {
+    width: 100%;
+    height: 40%;
+}
+
+.item {
+    display: flex;
+    width: 1920px;
+    justify-content: space-between;
+}
+.img-wrap .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: all .7s;
+}
+.img-wrap .imgbox:hover img {
+    opacity: 1;
+}
+.img-wrap:nth-child(1) .imgbox {
+    background: url('../images/lindakra-2-seat.avif') no-repeat center/cover;
+}
+.img-wrap:nth-child(2) .imgbox {
+    background: url('../images/gladelig-mug.avif') no-repeat center/cover;
+}
+.img-wrap:nth-child(3) .imgbox {
+    background: url('../images/nordberget-mattress.avif') no-repeat center/cover;
+}
+.img-wrap:nth-child(4) .imgbox {
+    background: url('../images/utmaning.avif') no-repeat center/cover;
+}
+.item:nth-child(2) .img-wrap:nth-child(1) .imgbox {
+    background: url('../images/stralfena.avif') no-repeat center/cover;
+}
+.item:nth-child(2) .img-wrap:nth-child(2) .imgbox {
+    background: url('../images/silltrut.avif') no-repeat center/cover;
+}
+.item:nth-child(2) .img-wrap:nth-child(3) .imgbox {
+    background: url('../images/jaemlik.avif') no-repeat center/cover;
+}
+.item:nth-child(2) .img-wrap:nth-child(4) .imgbox {
+    background: url('../images/upphetta.avif') no-repeat center/cover;
+}
+.ex h5 {
+    color: #ca5008;
+}
+
+.ex h4 {
+    color: #484848;
+    font-weight: 400;
+}
+
+.ex h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+/* section 7 */
+
+.video1 {
+    position: relative;
+}
+
+.footerbox {
+    z-index: 9;
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+}
+
+.top {
+    width: 1920px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+.icon ul li {
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.footertext {
+    position: absolute;
+    top: 0;
+    right: 10vw;
+}
+
+.footertext ul {
+    display: flex;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.footertext ul li {
+    margin-left: 100px;
+}
+
+.footertext ul li a {
+    font-size: 24px;
+    color: #fff;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.bottominner span {
+    width: 1700px;
+    margin-top: 50px;
+    position: absolute;
+    border-top: 1px solid #fff;
+}
+.bottomleft {
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+}
+
+.bottomleft p:nth-child(1) {
+    color: #fff;
+    margin: 50px 0px;
+    font-weight: 100;
+}
+
+.bottomleft p {
+    color: #fff;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.bottomleft a {
+    color: #fff;
+    font-weight: 400;
+}
+
+.bottomright {
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+}
+
+.bottomright ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+.bottomright ul li {
+    margin-left: 60px;
+}
+
+.bottomright a {
+    color: #fff;
+    font-weight: 300;
+}
